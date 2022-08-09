@@ -1,0 +1,10 @@
+<%= render 'articles/header' %>
+<h1>
+  <%= @article.title %>
+  <%= link_to "✎", edit_article_path(@article) %>
+  <%= link_to "❎",
+    article_path(@article),
+    data: {turbo_method: "delete", turbo_confirm: "Are you sure?"} %>
+</h1>
+<p><%= @article.content %></p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam earum enim quaerat saepe sint suscipit temporibus, eveniet nobis, vitae modi exercitationem architecto porro aut nisi fugiat quidem id consectetur maiores, quod illo tempora? Doloremque labore optio sunt quas tempora, ab animi laborum ipsa alias accusamus! Dignissimos rem quas et earum?</p>
